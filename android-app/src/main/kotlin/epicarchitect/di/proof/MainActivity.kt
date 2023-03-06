@@ -1,15 +1,16 @@
 package epicarchitect.di.proof
 
+import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
 import epicarchitect.di.proof.logic.android.HelloService
-import org.koin.android.ext.android.inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
 
-    private val helloService by inject<HelloService>()
+    private val helloService by lazy {
+        HelloService()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

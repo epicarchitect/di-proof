@@ -7,5 +7,5 @@ android {
 }
 
 dependencies {
-    api(projects.myUltraLogic)
+    api(projects.di.holder)
 }

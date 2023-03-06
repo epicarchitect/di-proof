@@ -1,22 +1,12 @@
 package epicarchitect.di.proof
 
 import android.app.Application
-import epicarchitect.di.proof.logic.android.mySuperLogicAndroidModule
-import epicarchitect.di.proof.logic.mySuperLogicModule
-import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
-import org.koin.core.context.startKoin
+import epicarchitect.di.proof.di.declaration.android.AndroidAppModule
+import epicarchitect.di.proof.di.holder.DI
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        startKoin {
-            androidLogger()
-            androidContext(this@App)
-            modules(
-                mySuperLogicModule,
-                mySuperLogicAndroidModule
-            )
-        }
+        DI.appModule = AndroidAppModule(this)
     }
 }

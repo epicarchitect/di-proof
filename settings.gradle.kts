@@ -21,3 +21,6 @@ rootProject.name = "di-proof"
 include(":android-app")
 include(":my-ultra-logic")
 include(":my-ultra-logic-android")
+include(":di:declaration")
+include(":di:declaration-android")
+include(":di:holder")

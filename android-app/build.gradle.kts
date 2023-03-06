@@ -13,5 +13,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.myUltraLogicAndroid)
+    implementation(projects.di.holder)
+    implementation(projects.di.declarationAndroid)
 }

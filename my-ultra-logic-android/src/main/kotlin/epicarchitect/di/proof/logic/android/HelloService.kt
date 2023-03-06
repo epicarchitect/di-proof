@@ -1,11 +1,11 @@
 package epicarchitect.di.proof.logic.android
 
-import epicarchitect.di.proof.logic.MyUltraLogic
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
+import epicarchitect.di.proof.di.holder.DI
 
-class HelloService : KoinComponent {
-    private val myLogic by inject<MyUltraLogic>()
+class HelloService {
+    private val myLogic by lazy {
+        DI.appModule.myUltraLogic
+    }
 
     fun startService() {
         myLogic.hello()

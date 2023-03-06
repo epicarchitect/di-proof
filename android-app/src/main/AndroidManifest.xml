@@ -3,8 +3,7 @@
 
     <application
         android:name=".App"
-        android:label="DI"
-        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        android:label="DI">
         <activity
             android:name=".MainActivity"
             android:exported="true">
