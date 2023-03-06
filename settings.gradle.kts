@@ -6,6 +6,7 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    includeBuild("build-logic")
 }
 
 dependencyResolutionManagement {
@@ -18,7 +19,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "di-proof"
 include(":android-app")
-include(":di")
-include(":my-service")
 include(":my-ultra-logic")
 include(":my-ultra-logic-android")
